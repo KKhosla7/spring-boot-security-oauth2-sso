@@ -1,0 +1,31 @@
+###
+server:
+  port: 8080
+
+###
+logging:
+     level:
+       org.springframework.security: DEBUG
+
+###
+facebook:
+  client:
+    client-id: {YOUR FACEBOOK APP ID CREATED ON https://developers.facebook.com/}
+    client-secret: {YOUR FACEBOOK APP SECRET CREATED ON https://developers.facebook.com/}
+    access-token-uri: https://graph.facebook.com/oauth/access_token
+    user-authorization-uri: https://www.facebook.com/dialog/oauth
+    token-name: oauth_token
+    authentication-scheme: query
+    client-authentication-scheme: form
+  resource:
+    user-info-uri: https://graph.facebook.com/me
+
+github:
+  client:
+    client-id: {YOUR GITHUB CLIENT ID CREATED ON https://github.com/settings/developers}
+    client-secret: {YOUR GITHUB CLIENT SECRET CREATED ON https://github.com/settings/developers}
+    access-token-uri: https://github.com/login/oauth/access_token
+    user-authorization-uri: https://github.com/login/oauth/authorize
+    client-authentication-scheme: form
+  resource:
+    user-info-uri: https://api.github.com/user
